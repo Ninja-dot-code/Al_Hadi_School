@@ -32,12 +32,14 @@ After building any component — update this file with the component name, file 
 
 #### `PublicNavbar`
 - **Path:** `src/components/layout/PublicNavbar.jsx`
-- **Tokens/Classes:** `sticky top-0 z-50 bg-surface shadow-xs`, top announcement bar `bg-primary text-text-inverse`, navigation pills `bg-text-primary text-text-inverse` (active) / `text-text-secondary hover:text-primary`, primary CTA `bg-primary hover:bg-primary-hover text-primary-foreground rounded-sm px-5 py-2.5 text-sm font-semibold`.
-- **Purpose:** Public website header with responsive drawer navigation and announcement strip.
+- **Last updated:** 2026-08-18
+- **Tokens/Classes:** `sticky top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-9 sm:size-11 rounded-xl bg-white ring-1 ring-black/5` with `img` logo, school name `text-text-primary group-hover:text-primary`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active link `text-primary` + underline `bg-primary`, CTA `bg-primary hover:bg-primary-hover text-primary-foreground`, hamburger `text-text-secondary`. Mobile drawer solid `bg-surface`. Always white/solid — no scroll-state transparency.
+- **Purpose:** Public website header with solid white sticky bar and responsive drawer navigation.
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
-- **Tokens/Classes:** `bg-[#0B132B] text-slate-300 border-t border-slate-800`, newsletter input `bg-slate-900 border border-slate-700 text-white`, submit icon button `bg-primary hover:bg-primary-hover text-white rounded-md`.
+- **Last updated:** 2026-08-18
+- **Tokens/Classes:** `bg-[#0B132B] text-slate-300 border-t border-slate-800`, newsletter input `bg-slate-900 border border-slate-700 text-white`, submit icon button `bg-primary hover:bg-primary-hover text-white rounded-md`, brand logo tile `size-10 rounded-lg bg-white ring-1 ring-black/5` with `img` logo (`siteContent.schoolLogo`).
 - **Purpose:** 4-column public site footer with contact details, quick links, portal links, newsletter form, and copyright.
 
 #### `PublicShell`
@@ -49,8 +51,9 @@ After building any component — update this file with the component name, file 
 
 #### `HeroSection`
 - **Path:** `src/components/public/HeroSection.jsx`
-- **Tokens/Classes:** `bg-background pt-12 pb-20`, headline `text-4xl sm:text-5xl lg:text-6xl font-extrabold text-text-primary`, accent `text-primary`, CTA `bg-primary text-primary-foreground rounded-sm px-6 py-3.5 shadow-card`, action cards `bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md`.
-- **Purpose:** Main hero section with announcement pill, dual CTAs, student illustration, and 4 quick-action cards.
+- **Last updated:** 2026-08-18
+- **Tokens/Classes:** full-bleed auto slider background — images from `dummyImages.heroSlides` (4 verified Unsplash campus scenes at w=1920), crossfade via `opacity` + `transition-opacity duration-1000`, active `opacity-100` / inactive `opacity-0`, autoplay `setInterval` 5000ms (respects `prefers-reduced-motion`), depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, dot indicators `h-1.5 rounded-full` active `w-8 bg-white` / inactive `w-3 bg-white/40 hover:bg-white/70`, headline `text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight` (matches `WelcomeSection` principal heading — Plus Jakarta Sans) with light-blue accent `text-primary-light`, subtitle `text-white/95`, CTA `bg-primary text-primary-foreground rounded-sm px-7 py-3.5`, quick-links strip `bg-surface border-b border-border-light` with icon tiles `size-10 rounded-lg bg-primary-light text-primary group-hover:bg-primary group-hover:text-primary-foreground`.
+- **Purpose:** Main hero with auto-rotating campus background slider, eyebrow pill, serif headline, trust stats, single admission CTA, and a 4-item quick-links strip below.
 
 #### `WelcomeSection`
 - **Path:** `src/components/public/WelcomeSection.jsx`
@@ -69,8 +72,9 @@ After building any component — update this file with the component name, file 
 
 #### `AcademicPrograms`
 - **Path:** `src/components/public/AcademicPrograms.jsx`
-- **Tokens/Classes:** `bg-surface py-20`, category filter buttons `px-5 py-2 rounded-full text-xs font-bold border`, active `bg-text-primary text-text-inverse`.
-- **Purpose:** Curriculum overview with interactive category filter pills.
+- **Last updated:** 2026-08-18
+- **Tokens/Classes:** `bg-surface py-20`, cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md`, grid `lg:grid-cols-3` (3 programs: Middle, Secondary, STEM Wings), grade badge `bg-surface/90 backdrop-blur-sm rounded-full`.
+- **Purpose:** Curriculum overview — three programs for Grades 6–10 (Primary Wing removed 2026-08-18 per school scope).
 
 #### `NoticeBoardSection`
 - **Path:** `src/components/public/NoticeBoardSection.jsx`
@@ -91,3 +95,52 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/components/public/CtaBanner.jsx`
 - **Tokens/Classes:** `rounded-3xl bg-gradient-to-r from-primary to-[#165a94] px-8 py-16 text-white shadow-lg`, button `bg-white text-primary rounded-sm px-6 py-3.5 font-bold`.
 - **Purpose:** High-conversion admissions call to action banner.
+
+#### `PageHero`
+- **Path:** `src/components/public/PageHero.jsx`
+- **Last updated:** 2026-08-18
+- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (wide campus scene) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20` (matches `HeroSection`), text `text-white`, breadcrumb `text-white/70 hover:text-white`, eyebrow pill `bg-white/10 backdrop-blur-sm border-white/20 rounded-full`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
+- **Purpose:** Shared page header for all public subpages (About, Academics, Facilities, Activities, Memories, Notices, Admissions, Contact). Background image + depth scrim guarantee white-text contrast on every page.
+- **Pattern note:** Depth scrim (bottom-weighted black gradient) matches the homepage hero exactly (`from-black/80 via-black/55 to-black/20`) for consistent legibility.
+
+### Public Subpage Components
+
+#### `AboutPage`
+- **Path:** `src/pages/public/AboutPage.jsx`
+- **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + milestone timeline card `bg-surface border-border rounded-xl shadow-card`, milestone dot `bg-primary ring-4 ring-primary-light`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
+- **Purpose:** Mission/vision, story + milestone timeline, values grid, leadership team.
+
+#### `FacilitiesPage`
+- **Path:** `src/pages/public/FacilitiesPage.jsx`
+- **Tokens/Classes:** stats strip `bg-surface-secondary` (matches `StatsBar`), facility cards `bg-surface border-border rounded-xl p-6 sm:p-8 shadow-card`, icon tile `size-14 rounded-xl bg-primary-light`, feature check pills `rounded-full bg-success-light` + `text-success-foreground`, tour CTA strip `bg-primary-muted rounded-2xl border-border`.
+- **Purpose:** Facilities grid with per-facility feature lists, stats bar, book-a-tour CTA.
+
+#### `ActivitiesPage`
+- **Path:** `src/pages/public/ActivitiesPage.jsx`
+- **Tokens/Classes:** program cards `bg-surface rounded-xl overflow-hidden shadow-card` with `h-48` images, highlight checks `rounded-full bg-primary-light` + `text-primary`, club cards `bg-background border-border rounded-xl shadow-card hover:-translate-y-1` with `size-12 rounded-xl bg-primary-light` icon tiles.
+- **Purpose:** Co-curricular flagship programs + extra-curricular clubs grid.
+
+#### `MemoriesPage`
+- **Path:** `src/pages/public/MemoriesPage.jsx`
+- **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), gallery cards `rounded-xl overflow-hidden` with `h-56` image + `bg-gradient-to-t from-slate-950/80` overlay, category badge `bg-primary text-primary-foreground`, lightbox `fixed inset-0 z-[100] bg-slate-950/90` with round nav buttons `bg-white/10 hover:bg-white/20`.
+- **Purpose:** Photo gallery with category filter pills and a full lightbox (prev/next, close, keyboard-accessible dialog).
+
+#### `NoticesPage`
+- **Path:** `src/pages/public/NoticesPage.jsx`
+- **Tokens/Classes:** filter pills `rounded-full px-5 py-2` (active `bg-text-primary text-text-inverse`), notice cards `bg-surface border-border rounded-xl p-6 sm:p-8 shadow-card hover:shadow-md scroll-mt-32`, category badges match `NoticeBoardSection` (Academic `bg-primary-light text-primary`, Circulars `bg-success-light text-success-foreground`, Events `bg-warning-light text-warning-foreground`), expandable detail via `<details>` with `border-t border-border-light` divider.
+- **Purpose:** Full notice board with category filter pills and expandable full-notice detail per card. `id={slug}` anchors support the homepage "Read Full Notice" links.
+
+#### `AdmissionsPage`
+- **Path:** `src/pages/public/AdmissionsPage.jsx`
+- **Tokens/Classes:** step guide cards with `size-14 rounded-full bg-surface border-2 border-primary` step circles (hover `bg-primary text-primary-foreground`), form fields `rounded-md border-border` + `focus:ring-2 ring-primary`, success state `bg-success-light border-success/20`, "What You'll Need" checklist card `bg-primary-muted` with `rounded-full bg-primary-light` check pills, admissions office card `bg-surface rounded-xl shadow-card`.
+- **Purpose:** Dummy static admission application form (no backend yet) — step guide, application form with success state, document checklist, and admissions office contact. Route already reachable via the existing navbar "Online Admission" button; no new nav link added.
+
+#### `AcademicsPage`
+- **Path:** `src/pages/public/AcademicsPage.jsx`
+- **Tokens/Classes:** approach cards `bg-surface border-border rounded-xl p-6 shadow-card hover:-translate-y-1` with `size-12 rounded-xl bg-primary-light` icon tiles, program filter pills `rounded-full p-1 bg-surface-tertiary` (active `bg-text-primary text-text-inverse`), program cards `bg-surface rounded-xl overflow-hidden shadow-card` with `h-52` image + grades badge `bg-surface/90 rounded-full`, subject checks `rounded-full bg-primary-light` + `text-primary`, highlight checks `rounded-full bg-success-light` + `text-success-foreground`, LSA strip `bg-primary-muted rounded-2xl`.
+- **Purpose:** Learning approach grid, filterable academic programs with subjects + highlights, LSA callout linking to Activities page.
+
+#### `ContactPage`
+- **Path:** `src/pages/public/ContactPage.jsx`
+- **Tokens/Classes:** contact cards `bg-surface rounded-xl shadow-card text-center` with `size-12 rounded-xl bg-primary-light` icon tiles, form fields `rounded-md border-border` + `focus:ring-2 ring-primary`, success state `bg-success-light border-success/20`, department contacts card `bg-surface rounded-xl shadow-card`, office hours card `bg-primary-muted`, map link `bg-background border-border rounded-xl hover:border-primary`.
+- **Purpose:** Contact info cards, message form (static success state), department contacts, office hours, map link.

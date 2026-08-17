@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { 
-  GraduationCap, 
   MapPin, 
   Phone, 
   Mail, 
@@ -21,8 +20,13 @@ export function PublicFooter() {
           {/* Col 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="size-10 rounded-lg bg-primary flex items-center justify-center text-white shadow-sm">
-                <GraduationCap className="size-6" />
+              <div className="size-10 rounded-lg bg-white flex items-center justify-center overflow-hidden shadow-sm ring-1 ring-black/5">
+                <img
+                  src={siteContent.schoolLogo}
+                  alt={siteContent.schoolName}
+                  className="size-full object-contain p-0.5"
+                  loading="lazy"
+                />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
                 {siteContent.schoolTag || siteContent.schoolName}

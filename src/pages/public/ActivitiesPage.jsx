@@ -1,0 +1,127 @@
+import {
+  Compass,
+  Music4,
+  BookOpen,
+  Leaf,
+  Code2,
+  Target,
+  Check,
+} from "lucide-react";
+import { PageHero } from "@/components/public/PageHero";
+import { CtaBanner } from "@/components/public/CtaBanner";
+import { activitiesData } from "@/data/activities.data";
+
+const extraIcons = {
+  Compass: Compass,
+  Music4: Music4,
+  BookOpen: BookOpen,
+  Leaf: Leaf,
+  Code2: Code2,
+  Target: Target,
+};
+
+export function ActivitiesPage() {
+  return (
+    <div className="w-full flex flex-col">
+      <PageHero
+        eyebrow="Life Skills & Activities"
+        title="Beyond the Classroom, a World of Opportunity"
+        subtitle={activitiesData.intro}
+        crumb="Activities"
+      />
+
+      {/* Co-curricular flagship programs */}
+      <section className="py-20 bg-background border-b border-border-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Co-Curricular</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight mt-2">
+                Flagship Programs
+              </h2>
+            </div>
+            <p className="text-sm sm:text-base text-text-secondary max-w-md">
+              Structured, coached programs that run through the academic year alongside the timetable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {activitiesData.coCurricular.map((program) => (
+              <div
+                key={program.id}
+                className="group bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md transition-all flex flex-col"
+              >
+                <div className="h-48 w-full overflow-hidden bg-surface-tertiary">
+                  <img
+                    src={program.image}
+                    alt={program.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-text-primary">{program.title}</h3>
+                  <p className="text-xs font-semibold text-primary mt-0.5">{program.tagline}</p>
+                  <p className="text-xs sm:text-sm text-text-secondary mt-3 leading-relaxed">
+                    {program.description}
+                  </p>
+
+                  <ul className="mt-5 pt-5 border-t border-border-light space-y-2">
+                    {program.highlights.map((h) => (
+                      <li key={h} className="flex items-start gap-2 text-xs text-text-secondary">
+                        <span className="size-4 rounded-full bg-primary-light flex items-center justify-center shrink-0 mt-0.5">
+                          <Check className="size-2.5 text-primary" />
+                        </span>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Extra-curricular clubs */}
+      <section className="py-20 bg-surface border-b border-border-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Extra-Curricular</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight mt-2">
+              Clubs & Societies for Every Interest
+            </h2>
+            <p className="text-sm sm:text-base text-text-secondary mt-3 leading-relaxed">
+              Weekly clubs where students explore hobbies, build friendships, and develop confidence beyond the syllabus.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {activitiesData.extraCurricular.map((club) => {
+              const Icon = extraIcons[club.icon] || Compass;
+              return (
+                <div
+                  key={club.id}
+                  className="group bg-background border border-border rounded-xl p-6 shadow-card hover:shadow-md transition-all hover:-translate-y-1 flex items-start gap-4"
+                >
+                  <div className="size-12 rounded-xl bg-primary-light flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="size-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-text-primary">{club.title}</h3>
+                    <p className="text-xs sm:text-sm text-text-secondary mt-1.5 leading-relaxed">
+                      {club.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <CtaBanner />
+    </div>
+  );
+}

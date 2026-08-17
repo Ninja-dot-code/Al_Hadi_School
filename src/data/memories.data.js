@@ -1,3 +1,5 @@
+import { dummyImages } from "@/lib/dummyImages";
+
 export const memoriesData = [
   {
     id: "mem-1",
@@ -5,7 +7,8 @@ export const memoriesData = [
     category: "Sports",
     date: "November 2025",
     count: 24,
-    cover: "/assets/gallery-sports.jpg",
+    cover: dummyImages.gallerySports,
+    image: dummyImages.gallerySports,
   },
   {
     id: "mem-2",
@@ -13,7 +16,8 @@ export const memoriesData = [
     category: "Academic",
     date: "December 2025",
     count: 18,
-    cover: "/assets/gallery-science.jpg",
+    cover: dummyImages.galleryScience,
+    image: dummyImages.galleryScience,
   },
   {
     id: "mem-3",
@@ -21,6 +25,61 @@ export const memoriesData = [
     category: "Culture",
     date: "September 2025",
     count: 15,
-    cover: "/assets/gallery-qirat.jpg",
+    cover: dummyImages.galleryQirat,
+    image: dummyImages.galleryQirat,
+  },
+  {
+    id: "mem-4",
+    title: "Arts & Drama Festival",
+    category: "Culture",
+    date: "October 2025",
+    count: 20,
+    cover: dummyImages.galleryArts,
+    image: dummyImages.galleryArts,
+  },
+  {
+    id: "mem-5",
+    title: "Central Library Reading Week",
+    category: "Academic",
+    date: "January 2026",
+    count: 12,
+    cover: dummyImages.galleryLibrary,
+    image: dummyImages.galleryLibrary,
+  },
+  {
+    id: "mem-6",
+    title: "Inter-House Sports Meet",
+    category: "Sports",
+    date: "February 2026",
+    count: 16,
+    cover: dummyImages.gallerySportsGround,
+    image: dummyImages.gallerySportsGround,
+  },
+  {
+    id: "mem-7",
+    title: "Campus Heritage Walk",
+    category: "Events",
+    date: "December 2025",
+    count: 28,
+    cover: dummyImages.galleryCampus,
+    image: dummyImages.galleryCampus,
+  },
+  {
+    id: "mem-8",
+    title: "Robotics Club Build-Off",
+    category: "Academic",
+    date: "January 2026",
+    count: 14,
+    cover: dummyImages.galleryScience,
+    image: dummyImages.galleryScience,
+  },
+  {
+    id: "mem-9",
+    title: "Annual Prize Distribution",
+    category: "Events",
+    date: "March 2026",
+    count: 30,
+    cover: dummyImages.galleryCampus,
+    image: dummyImages.galleryCampus,
   },
 ];

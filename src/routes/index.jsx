@@ -1,6 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PublicShell } from "@/components/layout/PublicShell";
 import { HomePage } from "@/pages/public/HomePage";
+import { AboutPage } from "@/pages/public/AboutPage";
+import { AcademicsPage } from "@/pages/public/AcademicsPage";
+import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
+import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
+import { MemoriesPage } from "@/pages/public/MemoriesPage";
+import { NoticesPage } from "@/pages/public/NoticesPage";
+import { AdmissionsPage } from "@/pages/public/AdmissionsPage";
+import { ContactPage } from "@/pages/public/ContactPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 
 export const router = createBrowserRouter([
@@ -14,66 +22,31 @@ export const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: (
-          <PlaceholderPage
-            title="About Greenwood / Al-Hadi"
-            description="Discover our mission, history, academic leadership, and faculty."
-          />
-        ),
+        element: <AboutPage />,
       },
       {
         path: "academics",
-        element: (
-          <PlaceholderPage
-            title="Academic Programs & Curriculum"
-            description="Comprehensive guide to Primary, Middle, Secondary, and STEM wings."
-          />
-        ),
+        element: <AcademicsPage />,
       },
       {
         path: "facilities",
-        element: (
-          <PlaceholderPage
-            title="Campus Facilities"
-            description="Explore our science & robotics laboratories, sports arena, library, and arts studios."
-          />
-        ),
+        element: <FacilitiesPage />,
       },
       {
         path: "activities",
-        element: (
-          <PlaceholderPage
-            title="Life Skills & Activities (LSA)"
-            description="Co-curricular athletics, robotics club, arts, debate, and leadership programs."
-          />
-        ),
+        element: <ActivitiesPage />,
       },
       {
         path: "memories",
-        element: (
-          <PlaceholderPage
-            title="Photo Gallery & Memories"
-            description="Visual archives of sports galas, annual exhibitions, and student achievements."
-          />
-        ),
+        element: <MemoriesPage />,
       },
       {
         path: "notices",
-        element: (
-          <PlaceholderPage
-            title="Notice Board & Circulars"
-            description="Official announcements, date sheets, exam schedules, and circulars."
-          />
-        ),
+        element: <NoticesPage />,
       },
       {
         path: "admissions",
-        element: (
-          <PlaceholderPage
-            title="Admissions 2026–2027"
-            description="Online admission applications, eligibility requirements, and fee schedules."
-          />
-        ),
+        element: <AdmissionsPage />,
       },
       {
         path: "admissions/status",
@@ -95,12 +68,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: (
-          <PlaceholderPage
-            title="Contact & Admissions Office"
-            description="Get in touch with administration, admissions counseling, or book a campus tour."
-          />
-        ),
+        element: <ContactPage />,
       },
       {
         path: "login",
