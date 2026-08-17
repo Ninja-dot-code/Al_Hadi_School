@@ -58,21 +58,21 @@ export function HeroSection() {
             />
           ))}
           {/* Depth scrim — dark toward text, image stays visible above */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
         </div>
 
         {/* Centered content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-5 sm:space-y-6">
             <Reveal delay={80}>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.06] drop-shadow-lg">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.06] drop-shadow-sm">
                 Welcome to{" "}
-                <span className="text-primary-light">Al-Hadi School.</span>
+                <span className="text-primary-light ">Al-Hadi School.</span>
               </h1>
             </Reveal>
 
             <Reveal delay={160}>
-              <p className="text-base sm:text-lg text-white/95 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
+              <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
                 {siteContent.heroSubtitle}
               </p>
             </Reveal>
