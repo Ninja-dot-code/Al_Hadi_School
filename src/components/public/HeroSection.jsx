@@ -65,7 +65,7 @@ export function HeroSection() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-28 lg:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-5 sm:space-y-6">
             <Reveal delay={80}>
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.06] drop-shadow-sm">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold     tracking-tight leading-[1.06] drop-shadow-sm">
                 Welcome to{" "}
                 <span className="text-primary-light ">Al-Hadi School.</span>
               </h1>
