@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Font ---- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Page & surfaces (neutral, cool gray) ---- */
+  --color-background: #f7f8fa;         /* app canvas */
+  --color-surface: #ffffff;            /* cards, panels, modals */
+  --color-surface-secondary: #f9fafb;  /* table header, subtle fills */
+  --color-surface-tertiary: #f3f4f6;   /* hover fills, chips */
+  --color-sidebar: #ffffff;            /* admin sidebar */
+  --color-sidebar-active: #e8f1fa;     /* active nav item bg (primary-light) */
+
+  /* ---- Borders ---- */
+  --color-border: #e5e7eb;             /* default border */
+  --color-border-light: #eef0f3;       /* subtle dividers */
+  --color-border-strong: #d1d5db;      /* emphasized border, inputs on focus-within */
+
+  /* ---- Text ---- */
+  --color-text-primary: #111827;       /* headings, key values */
+  --color-text-secondary: #4b5563;     /* body, labels */
+  --color-text-muted: #6b7280;         /* captions, secondary labels */
+  --color-text-subtle: #9ca3af;        /* placeholders, disabled */
+  --color-text-inverse: #ffffff;       /* text on primary / dark */
+
+  /* ---- Primary — brand blue (#1C74BD) ---- */
+  --color-primary: #1c74bd;
+  --color-primary-hover: #175e99;      /* button hover */
+  --color-primary-active: #12507f;     /* button pressed */
+  --color-primary-light: #e8f1fa;      /* tint bg (active nav, info chips) */
+  --color-primary-muted: #f2f7fc;      /* very subtle tint */
+  --color-primary-foreground: #ffffff; /* text/icon on primary */
+
+  /* ---- Success — approved / pass / published-ok (green) ---- */
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+  --color-success-foreground: #15803d;
+
+  /* ---- Warning — pending / attention (amber) ---- */
+  --color-warning: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-warning-foreground: #b45309;
+
+  /* ---- Error — rejected / fail / destructive (red) ---- */
+  --color-error: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-error-foreground: #b91c1c;
+
+  /* ---- Info / neutral state (uses primary family) ---- */
+  --color-info: #2563eb;
+  --color-info-light: #dbeafe;
+  --color-info-foreground: #1d4ed8;
+
+  /* ---- Draft / neutral badge (gray) ---- */
+  --color-neutral: #6b7280;
+  --color-neutral-light: #f3f4f6;
+  --color-neutral-foreground: #374151;
+
+  /* ---- Border radius (per doc 06) ---- */
+  --radius-sm: 8px;    /* small controls: buttons, badges, small chips */
+  --radius-md: 10px;   /* inputs, selects, textareas */
+  --radius-lg: 12px;   /* cards, table containers, popovers */
+  --radius-xl: 16px;   /* large sections, modals, hero panels */
+  --radius-full: 9999px; /* pills, avatars, status dots */
+
+  /* ---- Elevation ---- */
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 8px -2px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 24px -6px rgba(16, 24, 40, 0.12);
+}
+
+/* Map shadcn/ui semantic variables onto our tokens so shadcn
+   components (Button, Dialog, Input, Table, ...) inherit the palette. */
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-primary-foreground);
+  --secondary: var(--color-surface-secondary);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-surface-tertiary);
+  --muted-foreground: var(--color-text-muted);
+  --accent: var(--color-primary-light);
+  --accent-foreground: var(--color-primary-active);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-error-foreground);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-primary);
+  --radius: 0.625rem; /* 10px — shadcn base; components derive sm/lg from it */
+}
+
+/* Print utilities */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+}

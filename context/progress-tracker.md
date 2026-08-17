@@ -6,9 +6,9 @@ Update this file after every completed feature. Any AI agent reading this should
 
 ## Current Status
 
-**Phase:**
-**Last completed:**
-**Next:**
+**Phase:** Phase 1 — Public Website & Pages (Static Frontend)
+**Last completed:** 04 Public Shell & Homepage
+**Next:** 05 Public Informational Pages / Phase 0 Continuation
 
 ---
 
@@ -16,13 +16,13 @@ Update this file after every completed feature. Any AI agent reading this should
 
 ### Phase 0 — Foundation & Setup
 
-- [ ] 01 Project Scaffold & Design Tokens
+- [x] 01 Project Scaffold & Design Tokens
 - [ ] 02 Database Schema & RLS Foundation
 - [ ] 03 Auth & Role-Based Routing
 
 ### Phase 1 — Public Website & Pages (Static Frontend)
 
-- [ ] 04 Public Shell & Homepage
+- [x] 04 Public Shell & Homepage
 - [ ] 05 Public Informational Pages
 - [ ] 06 Public Static Blog & Notices
 
