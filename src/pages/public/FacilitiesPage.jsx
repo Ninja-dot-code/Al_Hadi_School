@@ -5,6 +5,7 @@ import {
   Trophy,
   Palette,
   MonitorPlay,
+  Home,
   Check,
   ArrowRight,
 } from "lucide-react";
@@ -20,6 +21,7 @@ const facilityIcons = {
   Trophy: Trophy,
   Palette: Palette,
   MonitorPlay: MonitorPlay,
+  Home: Home,
 };
 
 export function FacilitiesPage() {

@@ -3,15 +3,14 @@ export const facilitiesData = [
     id: "fac-1",
     title: "On-Campus Student Hostel",
     description: "A secure, fully furnished residential facility providing a safe and supportive living environment for students.",
-    icon: "room",
+    icon: "Home",
     features: [
       "Air-conditioned single & shared rooms",
       "24/7 security with CCTV & biometric access",
       "High-speed Wi-Fi & quiet study halls",
       "In-house dining mess & laundry facilities",
     ],
-  }
-  ,
+  },
   {
     id: "fac-2",
     title: "High-Tech Computer & Robotics Lab",
