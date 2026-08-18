@@ -21,7 +21,7 @@ export const siteContent = {
   contact: schoolContact,
 
   principal: {
-    name: "Dr. A. Rahman",
+    name: "Dr. Hassan",
     title: "Principal",
     image: dummyImages.principal,
     welcomeHeading: "Welcome to Al-Hadi School",
@@ -292,7 +292,7 @@ export const siteContent = {
       { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6–10." },
     ],
     leadership: [
-      { name: "Dr. A. Rahman", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning." },
+      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning." },
       { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development." },
       { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program." },
       { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service." },

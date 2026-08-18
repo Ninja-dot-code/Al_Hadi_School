@@ -1,16 +1,17 @@
 export const facilitiesData = [
   {
     id: "fac-1",
-    title: "Modern Science & Physics Lab",
-    description: "Fully equipped with modern apparatus, safety gear, and interactive experiment stations.",
-    icon: "FlaskConical",
+    title: "On-Campus Student Hostel",
+    description: "A secure, fully furnished residential facility providing a safe and supportive living environment for students.",
+    icon: "room",
     features: [
-      "Physics & chemistry apparatus benches",
-      "Dedicated safety gear & fire-proof cabinets",
-      "Guided practical experiment stations",
-      "Digital measurement instruments",
+      "Air-conditioned single & shared rooms",
+      "24/7 security with CCTV & biometric access",
+      "High-speed Wi-Fi & quiet study halls",
+      "In-house dining mess & laundry facilities",
     ],
-  },
+  }
+  ,
   {
     id: "fac-2",
     title: "High-Tech Computer & Robotics Lab",
@@ -48,15 +49,15 @@ export const facilitiesData = [
     ],
   },
   {
-    id: "fac-5",
-    title: "Creative Arts & Music Studio",
-    description: "A vibrant space for fine arts, drama production, and instrumental & vocal music practice.",
-    icon: "Palette",
+    id: "fac-1",
+    title: "Modern Science & Physics Lab",
+    description: "Fully equipped with modern apparatus, safety gear, and interactive experiment stations.",
+    icon: "FlaskConical",
     features: [
-      "Easels, canvases & pottery wheels",
-      "Drama stage with lighting rig",
-      "Pianos, guitars & percussion sets",
-      "Annual arts & drama festival",
+      "Physics & chemistry apparatus benches",
+      "Dedicated safety gear & fire-proof cabinets",
+      "Guided practical experiment stations",
+      "Digital measurement instruments",
     ],
   },
   {

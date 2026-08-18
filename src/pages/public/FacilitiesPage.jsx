@@ -97,28 +97,7 @@ export function FacilitiesPage() {
         </div>
       </section>
 
-      {/* Schedule a tour CTA strip */}
-      <section className="py-16 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-2xl bg-primary-muted border border-border p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="max-w-xl text-center sm:text-left">
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight">
-                See It for Yourself
-              </h3>
-              <p className="text-sm sm:text-base text-text-secondary mt-2 leading-relaxed">
-                Schedule a guided campus tour and see our laboratories, sports grounds, and smart classrooms in action.
-              </p>
-            </div>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover transition-colors shrink-0"
-            >
-              <span>Book a Tour</span>
-              <ArrowRight className="size-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+   
 
       <CtaBanner />
     </div>

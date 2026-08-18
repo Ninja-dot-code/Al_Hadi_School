@@ -67,8 +67,12 @@ export function MemoriesPage() {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
+
+                {/* Dark Gradient Overlay - Only visible on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Card Content - Only visible on hover */}
+                <div className="absolute inset-x-0 bottom-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-white/90">
                     <span className="px-2 py-0.5 rounded-full bg-primary text-primary-foreground">
                       {memory.category}
@@ -96,67 +100,67 @@ export function MemoriesPage() {
           )}
         </div>
       </section>
+    {/* Lightbox */}
+{activeIndex !== null && filtered[activeIndex] && (
+  <div
+    className="fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
+    onClick={closeLightbox}
+    role="dialog"
+    aria-modal="true"
+    aria-label={filtered[activeIndex].title}
+  >
+    <button
+      type="button"
+      onClick={closeLightbox}
+      aria-label="Close gallery"
+      className="absolute top-5 right-5 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+    >
+      <X className="size-6" />
+    </button>
 
-      {/* Lightbox */}
-      {activeIndex !== null && filtered[activeIndex] && (
-        <div
-          className="fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
-          onClick={closeLightbox}
-          role="dialog"
-          aria-modal="true"
-          aria-label={filtered[activeIndex].title}
-        >
-          <button
-            type="button"
-            onClick={closeLightbox}
-            aria-label="Close gallery"
-            className="absolute top-5 right-5 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-          >
-            <X className="size-6" />
-          </button>
+    <button
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation();
+        prev();
+      }}
+      aria-label="Previous photo"
+      className="absolute left-3 sm:left-6 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-10"
+    >
+      <ChevronLeft className="size-6" />
+    </button>
 
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              prev();
-            }}
-            aria-label="Previous photo"
-            className="absolute left-3 sm:left-6 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-10"
-          >
-            <ChevronLeft className="size-6" />
-          </button>
+    <div
+      className="max-w-4xl w-full"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        key={filtered[activeIndex].id}
+        src={filtered[activeIndex].image || filtered[activeIndex].cover}
+        alt={filtered[activeIndex].title}
+        className="w-full max-h-[70vh] object-contain rounded-xl shadow-lg"
+      />
+      <div className="mt-5 text-center">
+        <h3 className="text-lg font-bold text-white">{filtered[activeIndex].title}</h3>
+        <p className="text-xs text-white/70 mt-1">
+          {filtered[activeIndex].category} · {filtered[activeIndex].date}
+        </p>
+      </div>
+    </div>
 
-          <div
-            className="max-w-4xl w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={filtered[activeIndex].image}
-              alt={filtered[activeIndex].title}
-              className="w-full max-h-[70vh] object-contain rounded-xl shadow-lg"
-            />
-            <div className="mt-5 text-center">
-              <h3 className="text-lg font-bold text-white">{filtered[activeIndex].title}</h3>
-              <p className="text-xs text-white/70 mt-1">
-                {filtered[activeIndex].category} · {filtered[activeIndex].date}
-              </p>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              next();
-            }}
-            aria-label="Next photo"
-            className="absolute right-3 sm:right-6 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-10"
-          >
-            <ChevronRight className="size-6" />
-          </button>
-        </div>
-      )}
+    <button
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation();
+        next();
+      }}
+      aria-label="Next photo"
+      className="absolute right-3 sm:right-6 size-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors z-10"
+    >
+      <ChevronRight className="size-6" />
+    </button>
+  </div>
+)}
 
       <CtaBanner />
     </div>
