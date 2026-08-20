@@ -7,6 +7,8 @@ import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
 import { MemoriesPage } from "@/pages/public/MemoriesPage";
 import { NoticesPage } from "@/pages/public/NoticesPage";
+import { BlogsPage } from "@/pages/public/BlogsPage";
+import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
 import { AdmissionsPage } from "@/pages/public/AdmissionsPage";
 import { ContactPage } from "@/pages/public/ContactPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
@@ -43,6 +45,14 @@ export const router = createBrowserRouter([
       {
         path: "notices",
         element: <NoticesPage />,
+      },
+      {
+        path: "blogs",
+        element: <BlogsPage />,
+      },
+      {
+        path: "blogs/:slug",
+        element: <BlogDetailPage />,
       },
       {
         path: "admissions",

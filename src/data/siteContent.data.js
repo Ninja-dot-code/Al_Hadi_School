@@ -224,29 +224,6 @@ export const siteContent = {
     },
   ],
 
-  upcomingEvents: [
-    {
-      id: "ev-1",
-      day: "20",
-      month: "MAR",
-      year: "2026",
-      title: "Annual Science Exhibition",
-      time: "09:00 AM – 04:00 PM",
-      venue: "Main Auditorium",
-      category: "Academic",
-    },
-    {
-      id: "ev-2",
-      day: "05",
-      month: "APR",
-      year: "2026",
-      title: "Inter-House Debate Finals",
-      time: "10:30 AM – 12:30 PM",
-      venue: "Seminar Hall",
-      category: "Co-Curricular",
-    },
-  ],
-
   about: {
     heroEyebrow: "Who We Are",
     heroTitle: "A Legacy of Learning, A Future of Leaders",

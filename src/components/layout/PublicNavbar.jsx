@@ -18,7 +18,7 @@ export function PublicNavbar() {
     { name: "ABOUT US", path: "/about" },
     { name: "ACADEMICS", path: "/academics" },
     { name: "FACILITIES", path: "/facilities" },
-    { name: "NOTICE BOARD", path: "/notices" },
+    { name: "BLOGS", path: "/blogs" },
     { name: "GALLERY", path: "/memories" },
     { name: "CONTACT", path: "/contact" },
   ];

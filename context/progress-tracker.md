@@ -7,8 +7,8 @@ Update this file after every completed feature. Any AI agent reading this should
 ## Current Status
 
 **Phase:** Phase 1 — Public Website & Pages (Static Frontend)
-**Last completed:** 06 Public Static Blog & Notices (notices half — blog pending)
-**Next:** 06 Blog listing & article detail pages
+**Last completed:** 06 Public Static Blog & Notices (static listing and article detail UI)
+**Next:** 02 Database Schema & RLS Foundation
 
 ---
 
@@ -24,7 +24,9 @@ Update this file after every completed feature. Any AI agent reading this should
 
 - [x] 04 Public Shell & Homepage
 - [x] 05 Public Informational Pages
-- [ ] 06 Public Static Blog & Notices
+- [x] 06 Public Static Blog & Notices
+
+Homepage includes a static blog highlights section, `/blogs` listing, and slug-driven `/blogs/:slug` article detail pages. Content remains static until a future content-management scope is approved.
 
 ### Phase 2 — App Shells & Dashboards
 

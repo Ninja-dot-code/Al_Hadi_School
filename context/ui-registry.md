@@ -81,15 +81,20 @@ After building any component — update this file with the component name, file 
 - **Tokens/Classes:** `bg-background py-20`, category filter pills `bg-surface p-1 rounded-full border`, notice cards `bg-surface border border-border rounded-xl p-6 shadow-card`.
 - **Purpose:** Filterable official notices and circulars grid.
 
+#### `BlogHighlightsSection`
+- **Path:** `src/components/public/BlogHighlightsSection.jsx`
+- **Tokens/Classes:** `bg-surface py-20`, two-column story cards `bg-background border border-border rounded-xl overflow-hidden shadow-card`, image panel with `object-cover` and hover scale, category badge `bg-surface/90 rounded-full`, metadata icons `text-text-muted`.
+- **Purpose:** Homepage teaser for the latest school-life and academic stories, linking to the public blog listing.
+
+#### `BlogDetailPage`
+- **Path:** `src/pages/public/BlogDetailPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, article area `bg-background py-16 sm:py-20`, responsive cover image `rounded-xl overflow-hidden shadow-card`, article headings `text-xl sm:text-2xl font-bold`, body `text-base leading-8 text-text-secondary`, navigation links `text-primary`.
+- **Purpose:** Slug-driven public article view with author metadata, full static content, fallback image handling, and previous/list navigation.
+
 #### `AdmissionsGuide`
 - **Path:** `src/components/public/AdmissionsGuide.jsx`
 - **Tokens/Classes:** `bg-surface py-20`, numbered step circles `size-14 rounded-full bg-surface border-2 border-primary text-primary font-bold`.
 - **Purpose:** 4-step progressive admissions timeline.
-
-#### `CalendarSection`
-- **Path:** `src/components/public/CalendarSection.jsx`
-- **Tokens/Classes:** `bg-background py-20`, date pill `size-16 rounded-xl bg-primary-light text-primary border border-primary/20`.
-- **Purpose:** Upcoming academic and co-curricular event calendar stack.
 
 #### `CtaBanner`
 - **Path:** `src/components/public/CtaBanner.jsx`
