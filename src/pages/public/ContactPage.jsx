@@ -29,8 +29,7 @@ export function ContactPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow={contactPage.heroEyebrow}
-        title={contactPage.heroTitle}
+        title="Contact Us"
         subtitle={contactPage.heroSubtitle}
         crumb="Contact"
       />

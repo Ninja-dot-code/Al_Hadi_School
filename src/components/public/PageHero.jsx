@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 import { dummyImages } from "@/lib/dummyImages";
 
-export function PageHero({ eyebrow, title, subtitle, crumb }) {
+export function PageHero({ title, subtitle, crumb }) {
   return (
     <section className="relative overflow-hidden text-white">
       {/* Background image */}
@@ -28,14 +28,8 @@ export function PageHero({ eyebrow, title, subtitle, crumb }) {
             <span>Home</span>
           </Link>
           <ChevronRight className="size-3.5" />
-          <span className="text-white">{crumb || eyebrow}</span>
+          <span className="text-white">{crumb || title}</span>
         </nav>
-
-        {eyebrow && (
-          <span className="inline-block text-xs font-bold uppercase tracking-widest bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-4">
-            {eyebrow}
-          </span>
-        )}
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl drop-shadow-sm">
           {title}

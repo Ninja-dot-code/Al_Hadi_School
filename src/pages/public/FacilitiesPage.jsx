@@ -28,8 +28,7 @@ export function FacilitiesPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="Campus Facilities"
-        title="World-Class Facilities for Every Learner"
+        title="Facilities"
         subtitle="Explore our science & robotics laboratories, sports arena, library, and arts studios — built to support academic rigor and holistic growth."
         crumb="Facilities"
       />

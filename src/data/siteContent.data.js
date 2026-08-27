@@ -269,10 +269,10 @@ export const siteContent = {
       { year: "2026", title: "1,200+ Students", description: "A thriving community of learners across grades 6–10." },
     ],
     leadership: [
-      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning." },
-      { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development." },
-      { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program." },
-      { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service." },
+      { name: "Dr. A. Ali", role: "Principal", bio: "Over 25 years in education leadership, championing holistic learning.", image: dummyImages.staffPrincipal },
+      { name: "Ms. F. Hassan", role: "Vice Principal & Academics", bio: "Drives curriculum design, assessments, and teacher development.", image: dummyImages.staffAcademics },
+      { name: "Mr. K. Mehmood", role: "Head of STEM", bio: "Leads robotics, coding, and the innovation lab program.", image: dummyImages.staffStem },
+      { name: "Ms. S. Iqbal", role: "Head of Activities (LSA)", bio: "Coordinates athletics, arts, clubs, and community service.", image: dummyImages.staffActivities },
     ],
   },
 

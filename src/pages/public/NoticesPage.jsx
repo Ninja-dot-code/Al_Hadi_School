@@ -26,8 +26,7 @@ export function NoticesPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="Notice Board"
-        title="Official Announcements & Circulars"
+        title="Notice Board"
         subtitle="Date sheets, exam schedules, circulars, and event updates from the school office — all in one place."
         crumb="Notices"
       />

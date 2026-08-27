@@ -28,6 +28,12 @@ Update this file after every completed feature. Any AI agent reading this should
 
 Homepage includes a static blog highlights section, `/blogs` listing, and slug-driven `/blogs/:slug` article detail pages. Content remains static until a future content-management scope is approved.
 
+Public navbar dropdown enhancement completed: About Us includes Facilities and Staff Information, Academics includes Curriculum and Co-curricular Activities, and Activities includes Sports, Creative Arts, Clubs, and Leadership & Community Service. Section anchors were added to the existing public pages.
+
+Added dedicated public routes for `/curriculum`, `/co-curricular`, and `/staff`. Academics and Staff dropdown items now use these pages; Activities keeps its category dropdown because each category remains a useful direct entry point.
+
+Simplified the shared public `PageHero`: removed the eyebrow prop and badge, and changed public page heroes to use short direct titles. Restored the `/co-curricular` page route target after build verification found the file missing.
+
 ### Phase 2 — App Shells & Dashboards
 
 - [ ] 07 App Shells & Dashboards (UI, mock data)

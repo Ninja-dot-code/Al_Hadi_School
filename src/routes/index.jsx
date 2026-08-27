@@ -3,6 +3,8 @@ import { PublicShell } from "@/components/layout/PublicShell";
 import { HomePage } from "@/pages/public/HomePage";
 import { AboutPage } from "@/pages/public/AboutPage";
 import { AcademicsPage } from "@/pages/public/AcademicsPage";
+import { CurriculumPage } from "@/pages/public/CurriculumPage";
+import { CoCurricularPage } from "@/pages/public/CoCurricularPage";
 import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
 import { MemoriesPage } from "@/pages/public/MemoriesPage";
@@ -11,6 +13,7 @@ import { BlogsPage } from "@/pages/public/BlogsPage";
 import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
 import { AdmissionsPage } from "@/pages/public/AdmissionsPage";
 import { ContactPage } from "@/pages/public/ContactPage";
+import { StaffPage } from "@/pages/public/StaffPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
 
 export const router = createBrowserRouter([
@@ -29,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: "academics",
         element: <AcademicsPage />,
+      },
+      {
+        path: "curriculum",
+        element: <CurriculumPage />,
+      },
+      {
+        path: "co-curricular",
+        element: <CoCurricularPage />,
       },
       {
         path: "facilities",
@@ -79,6 +90,10 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "staff",
+        element: <StaffPage />,
       },
       {
         path: "login",

@@ -10,8 +10,7 @@ export function BlogsPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="School Life"
-        title="Ideas, Stories & Discoveries"
+        title="Blogs"
         subtitle="Explore the learning, curiosity, and community shaping everyday life at Al-Hadi."
         crumb="Blog"
       />

@@ -40,8 +40,7 @@ export function AcademicsPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow={academicsPage.heroEyebrow}
-        title={academicsPage.heroTitle}
+        title="Academics"
         subtitle={academicsPage.heroSubtitle}
         crumb="Academics"
       />
@@ -79,7 +78,7 @@ export function AcademicsPage() {
       </section>
 
       {/* Programs */}
-      <section className="py-20 bg-surface border-b border-border-light">
+      <section id="curriculum" className="py-20 bg-surface border-b border-border-light scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
@@ -185,7 +184,7 @@ export function AcademicsPage() {
       </section>
 
       {/* LSA strip */}
-      <section className="py-16 bg-background">
+      <section id="co-curricular" className="py-16 bg-background scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-2xl bg-primary-muted border border-border p-8 sm:p-12 text-center">
             <div className="mx-auto size-14 rounded-xl bg-primary-light flex items-center justify-center text-primary mb-5">

@@ -12,6 +12,12 @@ export const dummyImages = {
   // Principal portrait
   principal: u("1507003211169-0a1dd7228f2d", 800, 1000),
 
+  // Staff portraits
+  staffPrincipal: u("1500648767791-00dcc994a43e", 400, 400),
+  staffAcademics: u("1580489944761-15a19d654956", 400, 400),
+  staffStem: u("1560250097-0b93528c311a", 400, 400),
+  staffActivities: u("1551836022-d5d88e9218df", 400, 400),
+
   // Athletics & Sports
   sports: u("1461896836934-ffe607ba8211", 1200, 800),
 

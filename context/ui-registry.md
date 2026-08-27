@@ -32,9 +32,9 @@ After building any component — update this file with the component name, file 
 
 #### `PublicNavbar`
 - **Path:** `src/components/layout/PublicNavbar.jsx`
-- **Last updated:** 2026-08-18
-- **Tokens/Classes:** `sticky top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-9 sm:size-11 rounded-xl bg-white ring-1 ring-black/5` with `img` logo, school name `text-text-primary group-hover:text-primary`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active link `text-primary` + underline `bg-primary`, CTA `bg-primary hover:bg-primary-hover text-primary-foreground`, hamburger `text-text-secondary`. Mobile drawer solid `bg-surface`. Always white/solid — no scroll-state transparency.
-- **Purpose:** Public website header with solid white sticky bar and responsive drawer navigation.
+- **Last updated:** 2026-08-27
+- **Tokens/Classes:** `fixed top-0 z-50 w-full bg-surface/95 backdrop-blur-md border-b border-border-light shadow-xs`, logo tile `size-9 sm:size-11 rounded-xl bg-white ring-1 ring-black/5`, nav links `text-text-secondary hover:text-primary hover:bg-surface-tertiary/60`, active/open state `text-primary` with `bg-primary` underline, desktop dropdown `rounded-lg border border-border bg-surface p-2 shadow-lg`, mobile drawer `bg-surface`, mobile submenu `border-l-2 border-primary-light`.
+- **Purpose:** Public website header with About Us, Academics, and Activities dropdowns, click-away closing, route-change closing, accessible expanded states, and expandable mobile navigation.
 
 #### `PublicFooter`
 - **Path:** `src/components/layout/PublicFooter.jsx`
@@ -104,8 +104,9 @@ After building any component — update this file with the component name, file 
 #### `PageHero`
 - **Path:** `src/components/public/PageHero.jsx`
 - **Last updated:** 2026-08-18
-- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (wide campus scene) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20` (matches `HeroSection`), text `text-white`, breadcrumb `text-white/70 hover:text-white`, eyebrow pill `bg-white/10 backdrop-blur-sm border-white/20 rounded-full`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
-- **Purpose:** Shared page header for all public subpages (About, Academics, Facilities, Activities, Memories, Notices, Admissions, Contact). Background image + depth scrim guarantee white-text contrast on every page.
+- **Last updated:** 2026-08-27
+- **Tokens/Classes:** background image `dummyImages.pageHeroBg` (wide campus scene) with depth scrim `bg-gradient-to-t from-black/80 via-black/55 to-black/20`, text `text-white`, breadcrumb `text-white/70 hover:text-white`, title `text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm`, subtitle `text-white/85 drop-shadow-sm`, container `pt-24 sm:pt-32` (clears fixed navbar).
+- **Purpose:** Shared page header for all public subpages, using a short direct title instead of a separate eyebrow badge.
 - **Pattern note:** Depth scrim (bottom-weighted black gradient) matches the homepage hero exactly (`from-black/80 via-black/55 to-black/20`) for consistent legibility.
 
 ### Public Subpage Components
@@ -114,6 +115,21 @@ After building any component — update this file with the component name, file 
 - **Path:** `src/pages/public/AboutPage.jsx`
 - **Tokens/Classes:** mission card `bg-primary-muted rounded-xl border-border`, vision card `bg-surface-tertiary`, story `bg-background` + milestone timeline card `bg-surface border-border rounded-xl shadow-card`, milestone dot `bg-primary ring-4 ring-primary-light`, values cards `bg-surface rounded-xl shadow-card hover:shadow-md hover:-translate-y-1`, leadership cards `text-center` with `rounded-full bg-primary-light` avatar circles.
 - **Purpose:** Mission/vision, story + milestone timeline, values grid, leadership team.
+
+#### `CurriculumPage`
+- **Path:** `src/pages/public/CurriculumPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, page section `bg-background py-20`, program cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card`, program imagery `object-cover`, subject checks `rounded-full bg-primary-light`.
+- **Purpose:** Dedicated curriculum page showing the three academic programs, grades, descriptions, subjects, and enquiry link.
+
+#### `CoCurricularPage`
+- **Path:** `src/pages/public/CoCurricularPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, activity cards `bg-surface border border-border rounded-xl overflow-hidden shadow-card`, activity imagery `object-cover`, highlight checks `rounded-full bg-primary-light`.
+- **Purpose:** Dedicated co-curricular activities page for coached sports, creative arts, and leadership programs.
+
+#### `StaffPage`
+- **Path:** `src/pages/public/StaffPage.jsx`
+- **Tokens/Classes:** shared `PageHero`, staff cards `bg-surface border border-border rounded-xl p-6 shadow-card`, portrait `size-24 rounded-full object-cover ring-4 ring-primary-muted`, fallback icon `text-primary`, role label `text-primary`.
+- **Purpose:** Dedicated staff information page using the existing leadership card pattern and contact CTA.
 
 #### `FacilitiesPage`
 - **Path:** `src/pages/public/FacilitiesPage.jsx`

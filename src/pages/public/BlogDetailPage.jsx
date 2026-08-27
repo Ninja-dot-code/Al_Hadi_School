@@ -25,7 +25,6 @@ export function BlogDetailPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow={blog.category}
         title={blog.title}
         subtitle={blog.excerpt}
         crumb="Blog Story"

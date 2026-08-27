@@ -24,14 +24,13 @@ export function ActivitiesPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="Life Skills & Activities"
-        title="Beyond the Classroom, a World of Opportunity"
+        title="Activities"
         subtitle={activitiesData.intro}
         crumb="Activities"
       />
 
       {/* Co-curricular flagship programs */}
-      <section className="py-20 bg-background border-b border-border-light">
+      <section className="py-20 bg-background border-b border-border-light scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -49,6 +48,7 @@ export function ActivitiesPage() {
             {activitiesData.coCurricular.map((program) => (
               <div
                 key={program.id}
+                id={program.id === "act-sports" ? "sports" : program.id === "act-arts" ? "creative-arts" : "leadership"}
                 className="group bg-surface border border-border rounded-xl overflow-hidden shadow-card hover:shadow-md transition-all flex flex-col"
               >
                 <div className="h-48 w-full overflow-hidden bg-surface-tertiary">
@@ -85,7 +85,7 @@ export function ActivitiesPage() {
       </section>
 
       {/* Extra-curricular clubs */}
-      <section className="py-20 bg-surface border-b border-border-light">
+      <section id="clubs" className="py-20 bg-surface border-b border-border-light scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-primary">Extra-Curricular</span>

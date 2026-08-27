@@ -27,8 +27,7 @@ export function AboutPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow={about.heroEyebrow}
-        title={about.heroTitle}
+        title="About Us"
         subtitle={about.heroSubtitle}
         crumb="About Us"
       />
@@ -39,20 +38,21 @@ export function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-primary-muted rounded-xl p-6 sm:p-8 border border-border">
               <div className="size-12 rounded-xl bg-primary-light flex items-center justify-center text-primary mb-5">
-                <Target className="size-6" />
+     
+                <Eye className="size-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Mission</span>
               <p className="mt-3 text-text-secondary leading-relaxed text-sm sm:text-base">
-                {about.mission}
+                {about.vision}
               </p>
             </div>
             <div className="bg-surface-tertiary rounded-xl p-6 sm:p-8 border border-border">
               <div className="size-12 rounded-xl bg-surface flex items-center justify-center text-primary mb-5 shadow-card">
-                <Eye className="size-6" />
+                <Target className="size-6" />
               </div>
               <span className="text-xs font-bold uppercase tracking-widest text-text-muted">Our Vision</span>
               <p className="mt-3 text-text-secondary leading-relaxed text-sm sm:text-base">
-                {about.vision}
+                {about.mission}
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="py-20 bg-background border-b border-border-light">
+      <section id="staff" className="py-20 bg-background border-b border-border-light scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>

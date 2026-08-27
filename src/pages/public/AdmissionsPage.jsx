@@ -32,8 +32,7 @@ export function AdmissionsPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="Admissions"
-        title={`Admissions ${admissionsSession}`}
+        title="Admissions"
         subtitle="Apply online for the upcoming academic session. Our admissions team reviews every application and guides you through enrollment."
         crumb="Admissions"
       />

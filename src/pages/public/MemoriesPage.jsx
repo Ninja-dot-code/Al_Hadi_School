@@ -23,8 +23,7 @@ export function MemoriesPage() {
   return (
     <div className="w-full flex flex-col">
       <PageHero
-        eyebrow="Photo Gallery"
-        title="Memories That Shape Our Story"
+        title="Gallery"
         subtitle="Visual archives of sports galas, annual exhibitions, cultural festivals, and student achievements across the years."
         crumb="Gallery"
       />
