@@ -13,6 +13,7 @@ import {
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { siteContent } from "@/data/siteContent.data";
+import { StaffCard } from "@/components/shared/StaffCard";
 
 const valueIcons = {
   GraduationCap: GraduationCap,
@@ -153,27 +154,17 @@ export function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {about.leadership.map((member) => (
-              <div
-                key={member.name}
-                className="bg-surface border border-border rounded-xl p-6 shadow-card hover:shadow-md transition-all text-center"
-              >
-                <div className="mx-auto size-16 rounded-full bg-primary-light flex items-center justify-center text-primary mb-4">
-                  <Quote className="size-7" />
-                </div>
-                <h3 className="text-base font-bold text-text-primary">{member.name}</h3>
-                <p className="text-xs font-semibold text-primary mt-1">{member.role}</p>
-                <p className="text-xs text-text-muted mt-3 leading-relaxed">{member.bio}</p>
-              </div>
+            {about.leadership.map((member,index) => (
+           <StaffCard key={index} member={member} />
             ))}
           </div>
 
           <div className="mt-12 text-center">
             <Link
-              to="/contact"
+              to="/staff"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover transition-colors"
             >
-              <span>Contact the Office</span>
+              <span>View all start</span>
               <ArrowRight className="size-4" />
             </Link>
           </div>
