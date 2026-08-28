@@ -8,7 +8,7 @@ const schoolContact = {
 };
 
 export const siteContent = {
-  schoolName: "Al-Hadi School",
+  schoolName: "Al-Hadi Academy Gilgit",
   schoolTag: "Al-Hadi",
   schoolLogo: "https://alhadihostel.com/images/AHHlogo.png",
   tagline: "Tomorrow's Leaders Start Here",

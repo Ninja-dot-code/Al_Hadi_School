@@ -67,7 +67,7 @@ export function HeroSection() {
             <Reveal delay={80}>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold     tracking-tight leading-[1.06] drop-shadow-sm">
                 Welcome to{" "}
-                <span className="text-primary-light ">Al-Hadi School.</span>
+                <span className="text-primary-light ">Al-Hadi Academy Gilgit.</span>
               </h1>
             </Reveal>
 
@@ -77,7 +77,7 @@ export function HeroSection() {
               </p>
             </Reveal>
 
-            <Reveal delay={240}>
+            {/* <Reveal delay={240}>
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <Link
                   to="/admissions"
@@ -87,7 +87,7 @@ export function HeroSection() {
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
-            </Reveal>
+            </Reveal> */}
           </div>
         </div>
 
