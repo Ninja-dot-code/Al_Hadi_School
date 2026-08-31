@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { facilitiesData, facilitiesStats } from "@/data/facilities.data";
+import { Reveal } from "@/components/shared/Reveal";
 
 const facilityIcons = {
   FlaskConical: FlaskConical,
@@ -38,14 +39,16 @@ export function FacilitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-border">
             {facilitiesStats.map((stat, idx) => (
-              <div key={idx} className="text-center px-4 py-3 flex flex-col items-center justify-center">
-                <div className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight">
-                  {stat.value}
+              <Reveal key={idx} delay={idx * 60}>
+                <div className="text-center px-4 py-3 flex flex-col items-center justify-center">
+                  <div className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs font-semibold tracking-wider uppercase text-text-muted mt-2">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-xs font-semibold tracking-wider uppercase text-text-muted mt-2">
-                  {stat.label}
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -54,51 +57,50 @@ export function FacilitiesPage() {
       {/* Facilities grid */}
       <section className="py-20 bg-background border-b border-border-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Campus Facilities</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight mt-2">
-              Everything Your Child Needs to Thrive
-            </h2>
-          </div>
+          <Reveal>
+            <div className="max-w-2xl mb-12">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Campus Facilities</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-text-primary tracking-tight mt-2">
+                Everything Your Child Needs to Thrive
+              </h2>
+            </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {facilitiesData.map((facility) => {
+            {facilitiesData.map((facility, index) => {
               const Icon = facilityIcons[facility.icon] || MonitorPlay;
               return (
-                <div
-                  key={facility.id}
-                  className="group bg-surface border border-border rounded-xl p-6 sm:p-8 shadow-card hover:shadow-md transition-all flex flex-col"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="size-14 rounded-xl bg-primary-light flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon className="size-7" />
+                <Reveal key={facility.id} delay={index * 60}>
+                  <div className="group bg-surface border border-border rounded-xl p-6 sm:p-8 shadow-card hover:shadow-md transition-all flex flex-col h-full">
+                    <div className="flex items-start gap-4">
+                      <div className="size-14 rounded-xl bg-primary-light flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                        <Icon className="size-7" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold text-text-primary">{facility.title}</h3>
+                        <p className="text-xs sm:text-sm text-text-secondary mt-1.5 leading-relaxed">
+                          {facility.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-text-primary">{facility.title}</h3>
-                      <p className="text-xs sm:text-sm text-text-secondary mt-1.5 leading-relaxed">
-                        {facility.description}
-                      </p>
-                    </div>
-                  </div>
 
-                  <ul className="mt-6 pt-6 border-t border-border-light space-y-2.5">
-                    {facility.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
-                        <span className="size-4 rounded-full bg-success-light flex items-center justify-center shrink-0 mt-0.5">
-                          <Check className="size-2.5 text-success-foreground" />
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                    <ul className="mt-6 pt-6 border-t border-border-light space-y-2.5">
+                      {facility.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
+                          <span className="size-4 rounded-full bg-success-light flex items-center justify-center shrink-0 mt-0.5">
+                            <Check className="size-2.5 text-success-foreground" />
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Reveal>
               );
             })}
           </div>
         </div>
       </section>
-
-   
 
       <CtaBanner />
     </div>

@@ -17,7 +17,7 @@ export function AcademicPrograms() {
           />
           <Reveal>
             <Link
-              to="/academics"
+              to="/curriculum"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors whitespace-nowrap"
             >
               <span>View All Programs</span>

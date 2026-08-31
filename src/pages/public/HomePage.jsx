@@ -3,7 +3,6 @@ import { WelcomeSection } from "@/components/public/WelcomeSection";
 import { StatsBar } from "@/components/public/StatsBar";
 import { TalentsSection } from "@/components/public/TalentsSection";
 import { AcademicPrograms } from "@/components/public/AcademicPrograms";
-import { NoticeBoardSection } from "@/components/public/NoticeBoardSection";
 import { BlogHighlightsSection } from "@/components/public/BlogHighlightsSection";
 import { AdmissionsGuide } from "@/components/public/AdmissionsGuide";
 import { CtaBanner } from "@/components/public/CtaBanner";
@@ -26,16 +25,13 @@ export function HomePage() {
       {/* 5. Academic Programs & Curriculum */}
       <AcademicPrograms />
 
-      {/* 6. Notice Board & Circulars */}
-      <NoticeBoardSection />
-
-      {/* 7. School Life Stories */}
+      {/* 6. School Life Stories */}
       <BlogHighlightsSection />
 
-      {/* 8. Step-by-Step Admissions Guide */}
+      {/* 7. Step-by-Step Admissions Guide */}
       <AdmissionsGuide />
 
-      {/* 9. Final Call to Action Banner */}
+      {/* 8. Final Call to Action Banner */}
       <CtaBanner />
     </div>
   );

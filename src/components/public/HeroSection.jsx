@@ -67,7 +67,7 @@ export function HeroSection() {
             <Reveal delay={80}>
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold     tracking-tight leading-[1.06] drop-shadow-sm">
                 Welcome to{" "}
-                <span className="text-primary-light ">Al-Hadi Academy Gilgit.</span>
+                <span className="text-primary-light ">Al-Hadi Academy Gilgit</span>
               </h1>
             </Reveal>
 
@@ -80,10 +80,11 @@ export function HeroSection() {
             {/* <Reveal delay={240}>
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <Link
-                  to="/admissions"
+                  to="#welcome"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover active:bg-primary-active transition-colors focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
-                  <span>Apply for Admission</span>
+                 
+                  <span>Learn More</span>
                   <ArrowRight className="size-4" />
                 </Link>
               </div>
@@ -113,7 +114,7 @@ export function HeroSection() {
       </section>
 
       {/* 2. QUICK LINKS STRIP — refined, quiet, one line each */}
-      <section className="bg-surface border-b border-border-light">
+      {/* <section className="bg-surface border-b border-border-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border">
             {siteContent.quickActions.map((action) => (
@@ -138,7 +139,7 @@ export function HeroSection() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

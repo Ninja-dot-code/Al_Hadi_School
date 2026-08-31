@@ -4,6 +4,7 @@ import { PageHero } from "@/components/public/PageHero";
 import { CtaBanner } from "@/components/public/CtaBanner";
 import { siteContent } from "@/data/siteContent.data";
 import { StaffCard } from "@/components/shared/StaffCard";
+import { Reveal } from "@/components/shared/Reveal";
 
 export function StaffPage() {
     const { leadership } = siteContent.about;
@@ -20,19 +21,23 @@ export function StaffPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {leadership.map((member, index) => (
-                            <StaffCard key={index} member={member} />
+                            <Reveal key={index} delay={index * 60}>
+                                <StaffCard member={member} />
+                            </Reveal>
                         ))}
                     </div>
 
-                    <div className="mt-12 text-center">
-                        <Link
-                            to="/contact"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover transition-colors"
-                        >
-                            <span>Contact the Office</span>
-                            <ArrowRight className="size-4" />
-                        </Link>
-                    </div>
+                    <Reveal delay={200}>
+                        <div className="mt-12 text-center">
+                            <Link
+                                to="/contact"
+                                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary-hover transition-colors"
+                            >
+                                <span>Contact the Office</span>
+                                <ArrowRight className="size-4" />
+                            </Link>
+                        </div>
+                    </Reveal>
                 </div>
             </section>
 

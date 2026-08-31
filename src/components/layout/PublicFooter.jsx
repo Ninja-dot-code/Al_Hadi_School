@@ -97,20 +97,21 @@ export function PublicFooter() {
                   Academic Programs
                 </Link>
               </li>
+            
               <li>
-                <Link to="/results" className="hover:text-primary transition-colors flex items-center gap-1.5">
-                  <span>Results Portal</span>
-                  <span className="text-[10px] px-1.5 py-0.2 bg-primary/20 text-primary-light rounded">New</span>
+                <Link to="/activities" className="hover:text-primary transition-colors">
+                  Activities
                 </Link>
               </li>
+              <li>
+                <Link to="/staff" className="hover:text-primary transition-colors flex items-center gap-1.5">
+                  <span>Staff Information</span>
+                </Link>
+              </li>
+
               <li>
                 <Link to="/about" className="hover:text-primary transition-colors">
                   Faculty Directory
-                </Link>
-              </li>
-              <li>
-                <Link to="/notices" className="hover:text-primary transition-colors">
-                  Notice Archive
                 </Link>
               </li>
             </ul>
@@ -134,14 +135,10 @@ export function PublicFooter() {
               </li>
               <li>
                 <Link to="/results" className="hover:text-primary transition-colors">
-                  Parent Portal
+                  Application Form
                 </Link>
               </li>
-              <li>
-                <Link to="/results" className="hover:text-primary transition-colors">
-                  Student Desk
-                </Link>
-              </li>
+           
             </ul>
           </div>
 

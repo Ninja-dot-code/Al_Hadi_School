@@ -25,6 +25,7 @@ Update this file after every completed feature. Any AI agent reading this should
 - [x] 04 Public Shell & Homepage
 - [x] 05 Public Informational Pages
 - [x] 06 Public Static Blog & Notices
+- [x] Reveal animation applied to the shared public route shell so all public pages inherit the same fade-in effect instead of only the home page.
 
 Homepage includes a static blog highlights section, `/blogs` listing, and slug-driven `/blogs/:slug` article detail pages. Content remains static until a future content-management scope is approved.
 

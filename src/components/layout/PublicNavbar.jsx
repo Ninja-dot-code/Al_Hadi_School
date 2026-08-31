@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   ChevronDown,
-  FileSearch,
+  FileText,
   LogIn,
   Menu,
   X,
@@ -35,7 +35,7 @@ export function PublicNavbar() {
     },
     { name: "ACTIVITIES", path: "/activities" },
     { name: "BLOGS", path: "/blogs" },
-    { name: "GALLERY", path: "/memories" },
+    { name: "GALLERY", path: "/gallery" },
     { name: "CONTACT", path: "/contact" },
   ];
 
@@ -184,21 +184,16 @@ export function PublicNavbar() {
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
-              to="/admissions"
+            to="/application"
               className="inline-flex items-center justify-center px-4 xl:px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-xs xl:text-sm font-semibold hover:bg-primary-hover active:bg-primary-active transition-all shadow-xs focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
-              Online Admission
+              Online Application
             </Link>
           </div>
 
           {/* Mobile Menu Controls */}
           <div className="flex lg:hidden items-center gap-2 shrink-0">
-            <Link
-              to="/admissions"
-              className="px-3 py-1.5 rounded-lg bg-primary text-primary-foreground text-xs font-semibold shadow-xs"
-            >
-              Admission
-            </Link>
+           
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -277,11 +272,11 @@ export function PublicNavbar() {
 
           <div className="pt-4 border-t border-border-light flex flex-col gap-2.5">
             <Link
-              to="/results"
+              to="/application"
               className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg border border-border text-sm font-semibold text-text-primary hover:bg-surface-tertiary transition-colors"
             >
-              <FileSearch className="size-4 text-primary" />
-              <span>Check Exam Results</span>
+              <FileText className="size-4 text-primary" />
+              <span>online application</span>
             </Link>
             <Link
               to="/login"

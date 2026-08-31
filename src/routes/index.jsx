@@ -2,19 +2,17 @@ import { createBrowserRouter } from "react-router-dom";
 import { PublicShell } from "@/components/layout/PublicShell";
 import { HomePage } from "@/pages/public/HomePage";
 import { AboutPage } from "@/pages/public/AboutPage";
-import { AcademicsPage } from "@/pages/public/AcademicsPage";
 import { CurriculumPage } from "@/pages/public/CurriculumPage";
 import { CoCurricularPage } from "@/pages/public/CoCurricularPage";
 import { FacilitiesPage } from "@/pages/public/FacilitiesPage";
 import { ActivitiesPage } from "@/pages/public/ActivitiesPage";
-import { MemoriesPage } from "@/pages/public/MemoriesPage";
-import { NoticesPage } from "@/pages/public/NoticesPage";
+import { GalleryPage } from "@/pages/public/GalleryPage";
 import { BlogsPage } from "@/pages/public/BlogsPage";
 import { BlogDetailPage } from "@/pages/public/BlogDetailPage";
-import { AdmissionsPage } from "@/pages/public/AdmissionsPage";
 import { ContactPage } from "@/pages/public/ContactPage";
 import { StaffPage } from "@/pages/public/StaffPage";
 import { PlaceholderPage } from "@/pages/public/PlaceholderPage";
+import { ApplicationClosedPage } from "@/pages/public/ApplicationClosedPage";
 
 export const router = createBrowserRouter([
   {
@@ -28,10 +26,6 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutPage />,
-      },
-      {
-        path: "academics",
-        element: <AcademicsPage />,
       },
       {
         path: "curriculum",
@@ -50,12 +44,8 @@ export const router = createBrowserRouter([
         element: <ActivitiesPage />,
       },
       {
-        path: "memories",
-        element: <MemoriesPage />,
-      },
-      {
-        path: "notices",
-        element: <NoticesPage />,
+        path: "gallery",
+        element: <GalleryPage />,
       },
       {
         path: "blogs",
@@ -66,34 +56,16 @@ export const router = createBrowserRouter([
         element: <BlogDetailPage />,
       },
       {
-        path: "admissions",
-        element: <AdmissionsPage />,
-      },
-      {
-        path: "admissions/status",
-        element: (
-          <PlaceholderPage
-            title="Application Status Tracker"
-            description="Track the real-time review status of your admission application."
-          />
-        ),
-      },
-      {
-        path: "results",
-        element: (
-          <PlaceholderPage
-            title="Examination Results Portal"
-            description="Official published session results with instant roll-number search."
-          />
-        ),
-      },
-      {
         path: "contact",
         element: <ContactPage />,
       },
       {
         path: "staff",
         element: <StaffPage />,
+      },
+      {
+        path: "application",
+        element: <ApplicationClosedPage />,
       },
       {
         path: "login",
