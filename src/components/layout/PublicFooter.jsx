@@ -3,12 +3,12 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Send, 
   Facebook, 
   Twitter, 
   Instagram, 
   Linkedin,
-  ArrowRight
+  CalendarCheck,
+  ChevronRight
 } from "lucide-react";
 import { siteContent } from "@/data/siteContent.data";
 
@@ -17,6 +17,7 @@ export function PublicFooter() {
     <footer className="bg-[#0B132B] text-slate-300 pt-16 pb-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+          
           {/* Col 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
@@ -97,21 +98,19 @@ export function PublicFooter() {
                   Academic Programs
                 </Link>
               </li>
-            
+              <li>
+                <Link to="/facilities" className="hover:text-primary transition-colors">
+                  Campus Facilities
+                </Link>
+              </li>
               <li>
                 <Link to="/activities" className="hover:text-primary transition-colors">
-                  Activities
+                  Student Activities
                 </Link>
               </li>
               <li>
-                <Link to="/staff" className="hover:text-primary transition-colors flex items-center gap-1.5">
-                  <span>Staff Information</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/about" className="hover:text-primary transition-colors">
-                  Faculty Directory
+                <Link to="/staff" className="hover:text-primary transition-colors">
+                  Staff Directory
                 </Link>
               </li>
             </ul>
@@ -134,49 +133,57 @@ export function PublicFooter() {
                 </Link>
               </li>
               <li>
-                <Link to="/results" className="hover:text-primary transition-colors">
-                  Application Form
+                <Link to="/application" className="hover:text-primary transition-colors">
+                  Online Application
                 </Link>
               </li>
-           
+              <li>
+                <Link to="/results" className="hover:text-primary transition-colors">
+                  Student Portal
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Col 4: Newsletter (3 cols) */}
+          {/* Col 4: School Hours & Campus Visiting (3 cols) — REPLACED NEWSLETTER */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">
-              Newsletter
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-1.5">
+          Office Hours
             </h4>
-            <p className="text-xs text-slate-400">
-              Enter your email for circular updates, datesheets, and event notices.
-            </p>
-            <form onSubmit={(e) => e.preventDefault()} className="flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full bg-slate-900 border border-slate-700 text-sm rounded-md px-3.5 py-2.5 text-white placeholder:text-slate-500 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
-              />
-              <button
-                type="submit"
-                aria-label="Subscribe to circulars"
-                className="bg-primary hover:bg-primary-hover active:bg-primary-active text-white p-2.5 rounded-md transition-colors shrink-0"
-              >
-                <Send className="size-4" />
-              </button>
-            </form>
+            <div className="space-y-2 text-xs text-slate-400">
+              <div className="flex justify-between py-1 border-b border-slate-800/80">
+                <span className="font-medium">Mon – Thu:</span>
+                <span className="text-slate-200">7:30 AM – 2:30 PM</span>
+              </div>
+              <div className="flex justify-between py-1 border-b border-slate-800/80">
+                <span className="font-medium">Friday:</span>
+                <span className="text-slate-200">7:30 AM – 12:30 PM</span>
+              </div>
+              <div className="flex justify-between py-1 border-b border-slate-800/80">
+                <span className="font-medium">Saturday:</span>
+                <span className="text-slate-200">Office Only (8:00 AM - 12:00 PM)</span>
+              </div>
+              <div className="flex justify-between py-1">
+                <span className="font-medium">Sunday & Holidays:</span>
+                <span className="text-amber-400 font-semibold">Closed</span>
+              </div>
+            </div>
+
+            
           </div>
+
         </div>
 
         {/* Bottom copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2026 {siteContent.schoolTag || siteContent.schoolName}. Built for Modern Education.</p>
+          <p>© 2026 {siteContent.schoolTag || siteContent.schoolName}. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="#privacy" className="hover:text-slate-300 transition-colors">
+            <Link to="/privacy" className="hover:text-slate-300 transition-colors">
               Privacy Policy
-            </a>
-            <a href="#terms" className="hover:text-slate-300 transition-colors">
+            </Link>
+            <Link to="/terms" className="hover:text-slate-300 transition-colors">
               Terms of Use
-            </a>
+            </Link>
           </div>
         </div>
       </div>
