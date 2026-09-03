@@ -10,7 +10,7 @@ const schoolContact = {
 export const siteContent = {
   schoolName: "Al-Hadi Academy Gilgit",
   schoolTag: "Al-Hadi",
-  schoolLogo: "https://alhadihostel.com/images/AHHlogo.png",
+  schoolLogo: "/images/al-hadi-logo.png",
   tagline: "Tomorrow's Leaders Start Here",
   heroSubtitle:
     "Experience a transformative education that balances academic rigor with personal growth, preparing students to excel in a global landscape.",
@@ -27,7 +27,7 @@ export const siteContent = {
     welcomeHeading: "Welcome to Al-Hadi School",
     paragraphs: [
       "At Al-Hadi, we believe every child carries unique potential. Our mission is to create an environment where curiosity thrives, character is built, and futures are shaped through education that goes beyond textbooks.",
-      "We are dedicated to academic distinction, fostering an atmosphere where digital literacy and holistic life skills are integrated into every facet of the learning journey, ensuring our students are prepared for the global stage.",
+      "We are dedicated to academic distinction, fostering an atmosphere where digital literacy and holistic life skills are integrated into every facet of the learning journey, ensuring our students become confident, compassionate global citizens.",
     ],
     lsaNote: "Our comprehensive Life Skills & Activities (LSA) program ensures every student finds their passion and builds resilient character.",
   },
@@ -234,9 +234,9 @@ export const siteContent = {
     vision:
       "To nurture confident, compassionate, and digitally-literate global citizens who lead with integrity and serve their communities.",
     story: [
-      "Al-Hadi Public School was established with a simple belief: that a great school shapes not only minds but also hearts. What began as a small campus with a few classrooms has grown into a complete educational community serving grades 6 through 10.",
-      "Today our campus houses modern science and robotics laboratories, a central library, sports grounds, and creative arts studios — all in service of a balanced, child-centred education. Our faculty blends experienced educators with young, technology-savvy teachers to keep learning vibrant and relevant.",
-      "We measure success not just in examination results, but in the confidence of a student who speaks on stage, the teamwork of a house that wins a relay, and the character of a graduate who leads with kindness.",
+      "Al-Hadi Public School was established with a simple belief: that a great school shapes not only minds but also hearts. What began as a small campus with a few classrooms has grown into a centre of learning and innovation.",
+      "Today our campus houses modern science and robotics laboratories, a central library, sports grounds, and creative arts studios — all in service of a balanced, child-centred education. Our commitment to every child remains the same.",
+      "We measure success not just in examination results, but in the confidence of a student who speaks on stage, the teamwork of a house that wins a relay, and the character of a graduate who leads with integrity.",
     ],
     values: [
       {
